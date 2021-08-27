@@ -1,0 +1,39 @@
+USE LOCADORA_ISA
+GO
+
+INSERT INTO EMPRESA(NomeEmpresa)
+VALUES ('Localiza'), ('Aluga')
+GO
+
+SELECT *FROM EMPRESA
+
+INSERT INTO CLIENTE(NomeCliente)
+VALUES ('SAULO'), ('Lucas');
+GO
+
+SELECT * FROM CLIENTE
+
+
+INSERT INTO MARCA(NomeMarca)
+VALUES ('FIAT'), ('JAGUAR');
+GO
+
+SELECT * FROM MARCA
+
+INSERT INTO MODELO(IdMarca,NomeModelo)
+VALUES (1,'GrandSiena'), (2,'XF');
+GO
+
+SELECT *FROM MODELO
+
+INSERT INTO VEICULO(IdModelo, IdEmpresa, Placa)
+VALUES (1, 1, '666'), (1, 2, '999'), (2, 1, '777');
+GO
+
+SELECT * FROM VEICULO
+
+DELETE FROM VEICULO
+
+INSERT INTO ALUGUEL(IdVeiculo, IdCliente, IdEmpresa, DataAluguel)
+VALUES (2, 2, 2, '05/08/2021', '07/08/2021');
+GO
